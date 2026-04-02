@@ -1,1329 +1,1796 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Muhammad Aashir</title>
-	<link rel="icon" type="image/x-icon" href="/i">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Aashir Tariq | AI/ML Engineer & Full Stack Developer</title>
+  <meta name="description" content="Senior AI Engineer with 8+ years shipping production AI systems. Head of AI at AFNEXIS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ===== THEME VARIABLES ===== */
+    :root {
+      --transition-theme: background 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+    [data-theme="light"] {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fc;
+      --bg-tertiary: #f0f2f7;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f8f9fc;
+      --bg-code: #1e1e2e;
+      --accent: #2563eb;
+      --accent-light: #3b82f6;
+      --accent-glow: rgba(37, 99, 235, 0.08);
+      --accent-secondary: #7c3aed;
+      --accent-secondary-glow: rgba(124, 58, 237, 0.08);
+      --gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+      --gradient-subtle: linear-gradient(135deg, rgba(37, 99, 235, 0.06) 0%, rgba(124, 58, 237, 0.06) 100%);
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --text-on-accent: #ffffff;
+      --border: #e2e8f0;
+      --border-hover: rgba(37, 99, 235, 0.3);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+      --shadow-xl: 0 20px 60px rgba(0,0,0,0.1);
+      --shadow-accent: 0 8px 30px rgba(37, 99, 235, 0.25);
+      --tag-bg: rgba(37, 99, 235, 0.06);
+      --tag-border: rgba(37, 99, 235, 0.15);
+      --tag-text: #2563eb;
+      --navbar-bg: rgba(255, 255, 255, 0.85);
+      --navbar-border: rgba(0, 0, 0, 0.06);
+      --hero-glow-1: rgba(37, 99, 235, 0.08);
+      --hero-glow-2: rgba(124, 58, 237, 0.06);
+      --timeline-line: linear-gradient(to bottom, #2563eb, #7c3aed, #e2e8f0);
+      --footer-bg: #f8f9fc;
+    }
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+    [data-theme="dark"] {
+      --bg-primary: #0b0d17;
+      --bg-secondary: #111427;
+      --bg-tertiary: #171b30;
+      --bg-card: #141728;
+      --bg-card-hover: #1a1e38;
+      --bg-code: #0d0f1a;
+      --accent: #6395ff;
+      --accent-light: #7ba8ff;
+      --accent-glow: rgba(99, 149, 255, 0.1);
+      --accent-secondary: #a78bfa;
+      --accent-secondary-glow: rgba(167, 139, 250, 0.1);
+      --gradient: linear-gradient(135deg, #6395ff 0%, #a78bfa 100%);
+      --gradient-subtle: linear-gradient(135deg, rgba(99, 149, 255, 0.08) 0%, rgba(167, 139, 250, 0.08) 100%);
+      --text-primary: #e8ecf4;
+      --text-secondary: #8b95b0;
+      --text-muted: #505a74;
+      --text-on-accent: #ffffff;
+      --border: rgba(255, 255, 255, 0.07);
+      --border-hover: rgba(99, 149, 255, 0.3);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.25);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.35);
+      --shadow-xl: 0 20px 60px rgba(0,0,0,0.4);
+      --shadow-accent: 0 8px 30px rgba(99, 149, 255, 0.2);
+      --tag-bg: rgba(99, 149, 255, 0.1);
+      --tag-border: rgba(99, 149, 255, 0.2);
+      --tag-text: #6395ff;
+      --navbar-bg: rgba(11, 13, 23, 0.85);
+      --navbar-border: rgba(255, 255, 255, 0.05);
+      --hero-glow-1: rgba(99, 149, 255, 0.06);
+      --hero-glow-2: rgba(167, 139, 250, 0.05);
+      --timeline-line: linear-gradient(to bottom, #6395ff, #a78bfa, rgba(255,255,255,0.05));
+      --footer-bg: #0d0f1a;
+    }
 
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
-	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
+    /* ===== RESET ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
 
-	</head>
-	<body>
-	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/Aashir.jpg);"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Muhammad Aashir</a></h1>
-				<span class="position"><a href="#">AI/ML Engineer</a></span>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
-					<ul>
-						<!-- <li><a href="#" data-nav-section="home">Home</a></li> -->
-						<li class="active"><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="services">Expertise</a></li>
-						<li><a href="#" data-nav-section="skills">Skills</a></li>
-						<li><a href="#" data-nav-section="blog">Projects</a></li>
-						<li><a href="#" data-nav-section="education">Education</a></li>
-						<li><a href="#" data-nav-section="experience">Experience</a></li>
-						<li><a href="#" data-nav-section="work">Live Projects</a></li>
-						<!-- <li><a href="#" data-nav-section="blog">Blog</a></li> -->
-						<li><a href="#" data-nav-section="contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: var(--transition-theme);
+    }
 
-			<!-- <div class="colorlib-footer">
-				<ul>
-					<li><a href="#"><i class="icon-facebook2"></i></a></li>
-					<li><a href="#"><i class="icon-twitter2"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
-					<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-				</ul>
-			</div> -->
+    ::selection {
+      background: var(--accent);
+      color: var(--text-on-accent);
+    }
 
-		</aside>
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
 
-		<div id="colorlib-main">
-			<!-- <section id="colorlib-hero" class="js-fullheight" data-section="home">
-				<div class="flexslider js-fullheight">
-					<ul class="slides">
-				   	<li style="background-image: url(images/img_bg_1.jpg);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner js-fullheight">
-					   					<div class="desc">
-						   					<h1>Hi! <br>I'm Aashir</h1>
-						   					<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-												<p><a class="btn btn-primary btn-learn">Download CV <i class="icon-download4"></i></a></p>
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				   	<li style="background-image: url(images/img_bg_2.jpg);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<div class="desc">
-						   					<h1>Hi! <br>I'm Aashir</h1>
-												<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-												<p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				  	</ul>
-			  	</div>
-			</section> -->
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
 
-			<section class="colorlib-about" data-section="about">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">About Us</span>
-										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p align="justify"><strong>Hi I'm Aashir</strong> with expertise in Flutter, machine learning, natural language processing, and deep learning. I have experience developing and deploying mobile and web applications using Flutter, and have worked on several projects involving machine learning and deep learning algorithms for tasks such as image and speech recognition, as well as natural language processing for text analysis and language translation. I am always looking to learn and stay up-to-date with the latest technologies in these fields. In my current role, I am responsible for developing and maintaining a suite of Flutter-based applications for our company, as well as implementing machine learning and deep learning models to enhance their functionality and incorporate natural language processing capabilities.</p>
-										<p align="justify">I am skilled at communicating technical concepts to both technical and non-technical audiences and presenting data analysis results to stakeholders. I am always looking for new challenges and opportunities to apply my skills and learn more..</p>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
-									<div class="services color-4">
-										<span class="icon2"><i class="icon-phone3"></i></span>
-										<h3>Mobile App Developer</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-									<div class="services color-1">
-										<span class="icon2"><i class="icon-bulb"></i></span>
-										<h3>Product Designer (UI/UX)</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
-									<div class="services color-2">
-										<span class="icon2"><i class="icon-globe-outline"></i></span>
-										<h3>Web Design & Development</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
-									<div class="services color-3">
-										<span class="icon2"><i class="icon-data"></i></span>
-										<h3>Machine & Deep Learning</h3>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      background: var(--navbar-bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--navbar-border);
+      transition: var(--transition-theme);
+    }
 
-			
-			<section class="colorlib-services" data-section="services">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">What I do?</span>
-							<h2 class="colorlib-heading">Here are some of my expertise</h2>
-						</div>
-					</div>
-					<div class="row row-pt-md">
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-4">
-								<span class="icon">
-									<i class="icon-layers2"></i>
-								</span>
-								<div class="desc">
-									<h3>Machine Learning</h3>
-									<p style="text-align: justify;">Machine learning is to enable computers to learn from data and make predictions or decisions without being <span id="dots4">...</span><span id="more4"> explicitly programmed to do so. Machine learning algorithms can be used to identify patterns in data, classify data into different categories, or make predictions about future events. This enables computers to perform tasks that would otherwise be difficult or impossible for humans to perform, such as analyzing large datasets, recognizing patterns in images or speech, and making decisions in real-time.</span> </b></p> <button onclick="myFunction4()" id="myBtn4">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-5">
-								<span class="icon">
-									<i class="icon-data"></i>
-								</span>
-								<div class="desc">
-									<h3>Data Science</h3>
-									<p style="text-align: justify;">Data science is to extract insights and knowledge from data to inform decision-making and to solve problems <span id="dots5">...</span><span id="more5"> in a wide range of industries and fields. Data science involves the use of a variety of techniques and tools, such as statistical analysis, machine learning, and visualization, to collect, process, and analyze large and complex datasets. The goal is to discover meaningful patterns, trends, and insights in the data that can be used to inform business decisions, improve products or services, and drive innovation.</span> </b></p> <button onclick="myFunction5()" id="myBtn5">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-6">
-								<span class="icon">
-									<i class="icon-layers2"></i>
-								</span>
-								<div class="desc">
-									<h3>NLP & NLU</h3>
-									<p style="text-align: justify;">Natural language processing (NLP) is to enable machines to understand, interpret, and generate human language <span id="dots6">...</span><span id="more6"> in a way that is both useful and meaningful. The goal is to create technology that can understand and interact with humans in a way that feels natural and intuitive. <br>Together, NLP and NLU aim to make it possible for computers to understand and respond to human language, in turn facilitating the automation of various tasks such as language translations, question answering and text generation.</span> </b></p> <button onclick="myFunction6()" id="myBtn6">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-1">
-								<span class="icon">
-									<i class="icon-phone3"></i>
-								</span>
-								<div class="desc">
-									<h3>Flutter & Dart</h3>
-									<p style="text-align: justify;">Flutter allows developers to build beautiful, fast, and portable apps by providing a rich set of customizable <span id="dots">...</span><span id="more"> widgets and tools. The framework's unique "hot reload" feature allows for rapid iteration during development, making it easier to build, test, and refine apps. Flutter also uses the Dart programming language, which is also developed by Google. <br> In summary, the main purpose of Flutter is to provide an easy and efficient way for developers to build beautiful, high-performance mobile apps for both iOS and Android. </span> </b></p> <button onclick="myFunction()" id="myBtn">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-2">
-								<span class="icon">
-									<i class="icon-data"></i>
-								</span>
-								<div class="desc">
-									<h3>Python</h3>
-									<p style="text-align: justify;">Python is often used as a scripting language for web applications, for automating repetitive tasks, for  writing <span id="dots2">...</span><span id="more2"> data analysis and visualization tools, and for building machine learning models, among many other things. <br> <b>Web development</b>, such as building back-end systems using frameworks like Django and Flask. <br> <b>Data Science</b> like scientific computing and Machine learning. <br> System automation, testing and monitoring.<br> Scripting, software prototyping and development. </span> </b></p> <button onclick="myFunction2()" id="myBtn2">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-3">
-								<span class="icon">
-									<i class="icon-bulb"></i>
-								</span>
-								<div class="desc">
-									<h3>PHP & laravel</h3>
-									<p style="text-align: justify;">PHP is a server-side scripting language that is commonly used  for web development.<span id="dots3">...</span><span id="more3"> PHP code is executed on the server, and the output is sent to the client's web browser to be displayed.
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
 
-										Laravel is a PHP framework for web application development. It is an open-source framework that provides an elegant syntax and tools for tasks such as routing, authentication, and caching. Laravel aims to make the development process more efficient and enjoyable by providing an environment that is easy to use and understand. </span> </b></p> <button onclick="myFunction3()" id="myBtn3">Read more</button>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</section>
-			
-			<!-- <div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
-				<div class="overlay"></div>
-				<div class="colorlib-narrow-content">
-					<div class="row">
-					</div>
-					<div class="row">
-						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="309" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Cups of coffee</span>
-						</div>
-						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="356" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Projects</span>
-						</div>
-						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="30" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Clients</span>
-						</div>
-						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="10" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Partners</span>
-						</div>
-					</div>
-				</div>
-			</div> -->
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.5px;
+    }
 
-			<section class="colorlib-skills" data-section="skills">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Specialty</span>
-							<h2 class="colorlib-heading animate-box">My Skills</h2>
-						</div>
-					</div>
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<h2>Artificial Intelligence & Machine Learning</h2>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Natural Language Processing</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="85" style="width:85%">
-								    <span>85%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Computer Vision</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="80" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Speech Processing</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="80" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Machine Learning</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Statistics</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-								    <span>70%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Data Visualization</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-					</div>
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
 
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<h2>Development Side</h2>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Flutter</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="100"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:100%">
-								    <span>100%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Bootstrap</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="100"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:100%">
-								    <span>100%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Firebase</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="9" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>JavaScript</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Rest APi's</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>3rd Part Api's Integration</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-					</div>
+    .nav-links a {
+      padding: 8px 14px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.25s;
+    }
 
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+      background: var(--accent-glow);
+    }
 
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<h2>Python Libraries</h2>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Pytorch</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
-								    <span>75%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Matplotlib</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="95"
-								  	aria-valuemin="0" aria-valuemax="95" style="width:95%">
-								    <span>95%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Tensorflow & Keras</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
-								    <span>85%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Pandas</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Scikit-learn/Scikit-graph</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="85" style="width:85%">
-								    <span>85%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Numpy</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="90" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Flask</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="90" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Django</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-					</div>
+    .nav-cta-link {
+      margin-left: 8px;
+      padding: 8px 20px !important;
+      background: var(--gradient) !important;
+      color: var(--text-on-accent) !important;
+      border-radius: 10px !important;
+      font-weight: 600 !important;
+      font-size: 13px !important;
+      transition: transform 0.25s, box-shadow 0.25s !important;
+    }
 
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<h2>Programming Languages</h2>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>Python</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="85" style="width:85%">
-								    <span>85%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Dart</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="80" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>PHP</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="70" style="width:70%">
-								    <span>70%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<!-- <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>C#</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div> -->
-						<!-- <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>.NET MVC Framework</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-								    <span>70%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Flask</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>SQL-NoSQL</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>HTML-CSS-Bootstrap-JavaScript</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="100"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:100%">
-								    <span>100%</span>
-								  	</div>
-								</div>
-							</div>
-						</div> -->
+    .nav-cta-link:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-accent);
+      background: var(--gradient) !important;
+    }
 
-					</div>
+    /* Theme Toggle */
+    .theme-toggle {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s;
+      margin-left: 4px;
+    }
 
-				</div>
-			</section>
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow);
+    }
 
-			<section class="colorlib-blog" data-section="blog">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">What I do?</span>
-							<h2 class="colorlib-heading">Here are some of my public projects</h2>
-						</div>
-					</div>
+    [data-theme="dark"] .theme-toggle .fa-moon { display: none; }
+    [data-theme="light"] .theme-toggle .fa-sun { display: none; }
 
+    .hamburger {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg-card);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+    }
 
-					<div class="row">
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="#" class="blog-img"><img src="images/thesis.png" class="img-responsive"></a>
-								<div class="desc">
-									
-									<h3><a href="#">Multi-Modal Toxic Span Detection for Urdu Language</a></h3>
-									<p align="justify">Multi-modal toxic span detection refers to identifying and detecting toxic chunks from the video, especially for the Urdu language. The proposed <span id="dots7">...</span><span id="more7">
-										 approach is firstly I break the
-										video into frames and audio signals using Open-CV and then audio signals into text using
-										Whisper-V2 medium. Then extract the features individually. For frames, I used VGG-19,
-										for audio signals I used open-smile, and for text I used XLM-RoBERTa. After extracting the
-										features, I combine all the features in a single-dimensional vector using late fusion.  </span> </p> <button onclick="myFunction7()" id="myBtn7">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="blog-entry">
-								<a href="#" class="blog-img"><img src="images/voice_command.jpg" class="img-responsive"></a>
-								<div class="desc">
-									<h3><a href="#">Urdu Voice Command Recognition System</a></h3>
-									<p align="justify">An Urdu voice command recognition system is a technology designed to recognize and
-										interpret spoken commands in the Urdu language. <span id="dots8">...</span><span id="more8"> This technology can be used in various
-										applications, such as voice assistants, smart home devices, and voice-controlled software
-										interfaces. The proposed approach is converting all audios to wav format and then extract
-										the features using MFCC and Mel Spectograms. And after that pass to the neural network
-										for training. The total number of classes are forty-four and this is a multiclass classification
-										problem 
-									</span> </p> <button onclick="myFunction8()" id="myBtn8">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="#" class="blog-img"><img src="images/4.png" class="img-responsive"></a>
-								<div class="desc">
-									
-									<h3><a href="#">Wav2Vec2 Transformer XLSR:Urdu ASR Speech Recognition in Urdu</a></h3>
-									<p align="justify">Similar to Wav2Vec2, XLSR-Wav2Vec2 learns powerful speech representations from hundreds of thousands of hours of speech in more than 50 languages of unlabeled <span id="dots10">...</span><span id="more10">  speech. Similar, to BERT's masked language modeling, the model learns contextualized speech representations by randomly masking feature vectors before passing them to a transformer network.
-									</span> </p> <button onclick="myFunction10()" id="myBtn10">Read more</button>
-								</div>
-							</div>
-						</div>
-					</div>
-					
+    .hamburger span {
+      width: 18px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
 
-					<div class="row">
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="#" class="blog-img"><img src="images/13.png" class="img-responsive"></a>
-								<div class="desc">
-									
-									<h3><a href="#">My Sentence Tokenizer:Sentence Segmentation in Urdu</a></h3>
-									<p align="justify">The goal is to implement and practice some basic text processing techniques in NLP for the Urdu language. The Urdu language is written in a different style as compared <span id="dots18">...</span><span id="more18"> to English, making  segmentation a challenging task. There can be several reasons, but Space Insertion Problem and Space Omission Problems are the major ones.
-									</span> </p> <button onclick="myFunction18()" id="myBtn18">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="blog-entry">
-								<a href="#" class="blog-img"><img src="images/14.png" class="img-responsive" ></a>
-								<div class="desc">
-									<h3><a href="#">Text Classification via Unstructured Dataset</a></h3>
-									<p align="justify">The aim of the Project is to investigate how machine learning algorithms in Scikit-Learn can be used to carry out a text classification task. The task is to classify author <span id="dots19">...</span><span id="more19"> profiles as  female or male, a task referred to as gender identification. The dataset to use is PAN-AP-16 Twitter Corpus, the data consists of 426 author profiles, 215 female profiles and 211 male profiles. 
-									</span> </p> <button onclick="myFunction19()" id="myBtn19">Read more</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="#" class="blog-img"><img src="images/15.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<h3><a href="#">Gender Identification Using Machine Learning</a></h3>
-									<p align="justify">The main objective of this project is to provide a complete understanding of gender identification using Machine Learning toolkit (scikit-learn). In this project, we <span id="dots20">...</span><span id="more20"> are going to use the  structured dataset about male and female. The dataset consists of set of input attributes (Height, Weight, Hair Length, Beard, Scarf) and output attributes (Male, Female). 
-									</span> </p> <button onclick="myFunction20()" id="myBtn20">Read more</button>
-								</div>
-							</div>
-						</div>
-					</div> 
-				</div>
-			</section>
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 68px;
+    }
 
-			<section class="colorlib-education" data-section="education">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Education</span>
-							<h2 class="colorlib-heading animate-box">Education</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="fancy-collapse-panel">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingOne">
-									        <h4 class="panel-title">
-									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Master in Artificial Intelligence from FAST National University, Islamabad.
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-									         <div class="panel-body">
-									            <div class="row">
-										      		<div class="col-md-12">
-										      			<p><b>Thesis: </b>Multi-Modal Toxic Span Detection for Urdu</p>
-														<p>Multi-modal toxic span detection refers to the process of identifying and detecting toxic or offensive language in video and especially for the Urdu language. This can be a challenging task due to the complexity of the Urdu language and the cultural and social context in which it is used.</p>
-														<p><b>Concentrations</b> Machine Learning, Deep Learning, Natural Language Processing </p>
-										      		</div>
-										      	</div>
-									         </div>
-									    </div>
-									</div>
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingTwo">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bachelor Degree of Computer Science
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-									        <div class="panel-body">
-									            <p><b>FYP: </b>Urdu Voice Command Recognition System</p>
-												<p>An Urdu voice command recognition system is a type of technology that is designed to recognize and interpret spoken commands in the Urdu language. This technology can be used in a variety of applications, such as voice assistants, smart home devices, and voice controlled software interfaces.</p>
-												<p><b>Concentrations</b> Programming Concepts, Web Development, Flutter Mobile Application
-													Development</p>
-									        </div>
-									    </div>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    .hero .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
 
-			<section class="colorlib-experience" data-section="experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Experience</span>
-							<h2 class="colorlib-heading animate-box">Work Experience</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-				         <div class="timeline-centered">
-							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
+    .hero-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
 
-					               <div class="timeline-icon color-3">
-					                  <i class="icon-pen2"></i>
-					               </div>
+    .hero-glow.one {
+      background: var(--hero-glow-1);
+      top: -50px;
+      right: 10%;
+    }
 
-					               <div class="timeline-label">
-					                  <h2><a href="#">AI/ML Engineer</a> at Hosting Controller <span>2023-8 to presant</span></h2>
-									  <ul>
-										<li>Extensive Research</li>
-										<li>Develop and implement machine learning models.</li>
-										<li>Preprocess and analyze large datasets.</li>
-										<li>Design and build scalable AI solutions.</li>
-										<li>Optimize algorithms for performance and accuracy.</li>
-										<li>Collaborate with cross-functional teams on AI projects.</li>
-										<li>Monitor and maintain AI systems in production.</li>
-									  </ul>
-					               </div>
-					            </div>
-					         </article>	
+    .hero-glow.two {
+      background: var(--hero-glow-2);
+      bottom: -100px;
+      left: 5%;
+    }
 
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
+    .hero-content {
+      max-width: 620px;
+      position: relative;
+      z-index: 2;
+    }
 
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
-					               </div>
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      background: var(--accent-glow);
+      border: 1px solid var(--tag-border);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--tag-text);
+      margin-bottom: 28px;
+    }
 
-					               <div class="timeline-label">
-					                  <h2><a href="#">Research Assistant</a> at AIM's Lab <span>2022-6 to 2023-8</span></h2>
-									  <ul>
-										<li>Extensive Research</li>
-										<li>Perform feature engineering and data augmentation.</li>
-										<li>Implement deep learning frameworks (e.g., TensorFlow, PyTorch).</li>
-										<li>Conduct hyperparameter tuning and model validation.</li>
-										<li>Deploy machine learning models using MLOps practices.</li>
-										<li>Integrate AI solutions with existing software systems using Flask.</li>
-									  </ul>
-					               </div>
-					            </div>
-					         </article>
+    .hero-badge .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      position: relative;
+    }
 
+    .hero-badge .pulse-dot::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      border: 2px solid #22c55e;
+      animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
 
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-2">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Flutter Mobile App developer</a> at My Impact Meter <span>2021-3 to 2022-6</span></h2>
-									<ul>
-										<li>Develop and implement custom UI/UX design.</li>
-										<li>Implement data storage solutions, such as local storage and cloud databases.</li>
-										<li>Integrate third-party libraries and APIs.</li>
-										<li>Maintain code and project documentation throughout the development process.</li>
-										<li>Collaborate with design and product teams to understand user requirements and implement features that meet their needs.</li>
-									</ul>
-					               </div>
-					            </div>
-					         </article>
+    @keyframes ping {
+      0% { opacity: 0.8; transform: scale(1); }
+      75%, 100% { opacity: 0; transform: scale(2); }
+    }
 
-					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   </div>
-				</div>
-			</section>
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
 
-			<section class="colorlib-work" data-section="work">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Work</span>
-							<h2 class="colorlib-heading animate-box">Recent Work</h2>
-						</div>
-					</div>
-					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-						<div class="col-md-12">
-							<p class="work-menu"><span>Web Projects</span></p>
-						</div>
-					</div>
-					<div class="row">
-						<a href="https://www.myimpactmeter.com/">
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/myimpactmeter.png);">
+    .hero h1 .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-								</div>
-							</div>
-						</a>
-						<a href="https://finovativegulf.net/">
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<div class="project" style="background-image: url(images/finovative.png);">
+    .hero-desc {
+      font-size: 17px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
 
-								</div>
-							</div>
-						</a>
-						<a href="https://easyloan.ae/">
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-								<div class="project" style="background-image: url(images/easyloan.png);">
-									
-								</div>
-							</div>
-						</a>
-						<a href="https://www.emiratescash.net/">
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-								<div class="project" style="background-image: url(images/emiratescash.png);">
-									
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-						<div class="col-md-12">
-							<p class="work-menu"><span>Mobile Apps</span></p>
-						</div>
-					</div>
-					<div class="animate-box">
-						<ul>
-							<li>
-								<a style="color: black;" href="https://play.google.com/store/apps/details?id=com.impact.meter&pli=1">My Impact Meter App</a>
-							</li>
-							<li>
-								<a style="color: black;" href="https://play.google.com/store/apps/details?id=com.mimsupplier.education">MiM Education Supplier App</a>
-							</li>
-							<li>
-								<a style="color: black;" href="https://play.google.com/store/apps/details?id=com.impactor.grocery">MIM Grocery Supplier App</a>
-							</li>
-							<li>
-								<a style="color: black;" href="https://play.google.com/store/apps/details?id=com.impactor.ngo">MiM Not for Profit App</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</section>
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: 36px;
+    }
 
-			
-			<section class="colorlib-contact" data-section="contact">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Get in Touch</span>
-							<h2 class="colorlib-heading">Contact</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-globe-outline"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="#">mashr9980@gmail.com</a></p>
-								</div>
-							</div>
+    .hero-stat {
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-align: center;
+      transition: var(--transition-theme);
+    }
 
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-map"></i>
-								</div>
-								<div class="colorlib-text">
-									<p>G-13, Islamabad, Pakistan</p>
-								</div>
-							</div>
+    .hero-stat .number {
+      font-size: 28px;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
 
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-phone"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="https://wa.me/+923008808985" target="_blank">+923008808985</a></p>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-md-7 col-md-push-1">
-							<div class="row">
-								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
-										</div>
-										<div class="form-group">
-											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-										</div>
-										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
-										</div>
-									</form>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    .hero-stat .label {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
 
-		</div><!-- end:colorlib-main -->
-	</div><!-- end:container-wrap -->
-	</div><!-- end:colorlib-page -->
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+    }
 
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
-	<!-- Owl carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
-	
-	
-	<!-- MAIN JS -->
-	<script src="js/main.js"></script>
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: 12px;
+      font-size: 14.5px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s;
+    }
 
-	</body>
+    .btn-primary {
+      background: var(--gradient);
+      color: var(--text-on-accent);
+      box-shadow: var(--shadow-sm);
+    }
 
-	<script>
-		function myFunction() {
-		  var dots = document.getElementById("dots");
-		  var moreText = document.getElementById("more");
-		  var btnText = document.getElementById("myBtn");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction2() {
-		  var dots = document.getElementById("dots2");
-		  var moreText = document.getElementById("more2");
-		  var btnText = document.getElementById("myBtn2");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction3() {
-		  var dots = document.getElementById("dots3");
-		  var moreText = document.getElementById("more3");
-		  var btnText = document.getElementById("myBtn3");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction4() {
-		  var dots = document.getElementById("dots4");
-		  var moreText = document.getElementById("more4");
-		  var btnText = document.getElementById("myBtn4");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction5() {
-		  var dots = document.getElementById("dots5");
-		  var moreText = document.getElementById("more5");
-		  var btnText = document.getElementById("myBtn5");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction6() {
-		  var dots = document.getElementById("dots6");
-		  var moreText = document.getElementById("more6");
-		  var btnText = document.getElementById("myBtn6");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction7() {
-		  var dots = document.getElementById("dots7");
-		  var moreText = document.getElementById("more7");
-		  var btnText = document.getElementById("myBtn7");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction8() {
-		  var dots = document.getElementById("dots8");
-		  var moreText = document.getElementById("more8");
-		  var btnText = document.getElementById("myBtn8");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction9() {
-		  var dots = document.getElementById("dots9");
-		  var moreText = document.getElementById("more9");
-		  var btnText = document.getElementById("myBtn9");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction10() {
-		  var dots = document.getElementById("dots10");
-		  var moreText = document.getElementById("more10");
-		  var btnText = document.getElementById("myBtn10");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-accent);
+    }
 
-		function myFunction11() {
-		  var dots = document.getElementById("dots11");
-		  var moreText = document.getElementById("more11");
-		  var btnText = document.getElementById("myBtn11");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction12() {
-		  var dots = document.getElementById("dots12");
-		  var moreText = document.getElementById("more12");
-		  var btnText = document.getElementById("myBtn12");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction13() {
-		  var dots = document.getElementById("dots13");
-		  var moreText = document.getElementById("more13");
-		  var btnText = document.getElementById("myBtn13");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction14() {
-		  var dots = document.getElementById("dots14");
-		  var moreText = document.getElementById("more14");
-		  var btnText = document.getElementById("myBtn14");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction15() {
-		  var dots = document.getElementById("dots15");
-		  var moreText = document.getElementById("more15");
-		  var btnText = document.getElementById("myBtn15");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction16() {
-		  var dots = document.getElementById("dots16");
-		  var moreText = document.getElementById("more16");
-		  var btnText = document.getElementById("myBtn16");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction17() {
-		  var dots = document.getElementById("dots17");
-		  var moreText = document.getElementById("more17");
-		  var btnText = document.getElementById("myBtn17");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction18() {
-		  var dots = document.getElementById("dots18");
-		  var moreText = document.getElementById("more18");
-		  var btnText = document.getElementById("myBtn18");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction19() {
-		  var dots = document.getElementById("dots19");
-		  var moreText = document.getElementById("more19");
-		  var btnText = document.getElementById("myBtn19");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-		function myFunction20() {
-		  var dots = document.getElementById("dots20");
-		  var moreText = document.getElementById("more20");
-		  var btnText = document.getElementById("myBtn20");
-		
-		  if (dots.style.display === "none") {
-			dots.style.display = "inline";
-			btnText.innerHTML = "Read more"; 
-			moreText.style.display = "none";
-		  } else {
-			dots.style.display = "none";
-			btnText.innerHTML = "Read less"; 
-			moreText.style.display = "inline";
-		  }
-		}
-	</script>
+    .btn-outline {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
 
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Code Block */
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+
+    .code-window {
+      width: 400px;
+      background: var(--bg-code);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .code-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .code-dot { width: 11px; height: 11px; border-radius: 50%; }
+    .code-dot.r { background: #ff5f57; }
+    .code-dot.y { background: #febc2e; }
+    .code-dot.g { background: #28c840; }
+
+    .code-titlebar .filename {
+      margin-left: 12px;
+      font-size: 12px;
+      color: #8b8fa3;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .code-body {
+      padding: 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 1.9;
+      color: #c9d1d9;
+    }
+
+    .ck { color: #c792ea; }
+    .cf { color: #82aaff; }
+    .cs { color: #c3e88d; }
+    .cn { color: #f78c6c; }
+    .cb { color: #89ddff; }
+    .cc { color: #546e7a; }
+    .cp { color: #ffcb6b; }
+
+    .code-line {
+      margin-bottom: 0;
+      white-space: pre;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-alt {
+      background: var(--bg-secondary);
+      transition: var(--transition-theme);
+    }
+
+    .section-header {
+      margin-bottom: 56px;
+    }
+
+    .section-header.center {
+      text-align: center;
+    }
+
+    .section-header.center .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .section-label i {
+      font-size: 11px;
+    }
+
+    .section-title {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-top: 14px;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* ===== EXPERTISE GRID ===== */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .expertise-card {
+      padding: 30px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: all 0.35s ease;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expertise-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-hover);
+    }
+
+    .expertise-card:hover::after {
+      opacity: 1;
+    }
+
+    .expertise-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+      background: var(--accent-glow);
+      color: var(--accent);
+    }
+
+    .expertise-card:nth-child(even) .expertise-icon {
+      background: var(--accent-secondary-glow);
+      color: var(--accent-secondary);
+    }
+
+    .expertise-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .expertise-card p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ===== SKILLS ===== */
+    .skills-categories {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .skill-cat-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-cat-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .skills-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      transition: all 0.25s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-tag:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .skill-tag.core {
+      background: var(--accent-glow);
+      border-color: var(--tag-border);
+      color: var(--tag-text);
+      font-weight: 600;
+    }
+
+    /* ===== PROJECTS ===== */
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tab {
+      padding: 9px 22px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-secondary);
+      transition: all 0.25s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .filter-tab:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow);
+    }
+
+    .filter-tab.active {
+      background: var(--gradient);
+      color: var(--text-on-accent);
+      border-color: transparent;
+      box-shadow: var(--shadow-accent);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      transition: all 0.35s ease;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-hover);
+    }
+
+    .project-card.hidden {
+      display: none;
+    }
+
+    .project-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+      background: var(--accent-glow);
+      color: var(--tag-text);
+      border: 1px solid var(--tag-border);
+    }
+
+    .project-card h3 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .project-tags span {
+      padding: 4px 10px;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--tag-text);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      background: var(--accent-glow);
+      color: var(--accent);
+      border: 1px solid var(--tag-border);
+      transition: all 0.25s;
+      width: fit-content;
+    }
+
+    .project-link:hover {
+      background: var(--gradient);
+      color: var(--text-on-accent);
+      border-color: transparent;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-accent);
+    }
+
+    .mobile-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .mobile-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      transition: all 0.25s;
+    }
+
+    .mobile-badge:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    .mobile-badge i {
+      font-size: 14px;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .timeline {
+      position: relative;
+      max-width: 820px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 0;
+      width: 2px;
+      background: var(--timeline-line);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      padding-left: 40px;
+      margin-bottom: 44px;
+      position: relative;
+    }
+
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gradient);
+      border: 3px solid var(--bg-primary);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+      transition: var(--transition-theme);
+    }
+
+    .timeline-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item h3 {
+      font-size: 19px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .timeline-company {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
+    }
+
+    .timeline-item ul {
+      padding-left: 18px;
+    }
+
+    .timeline-item li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      line-height: 1.65;
+    }
+
+    .timeline-item li strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ===== EDUCATION ===== */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .edu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-hover);
+    }
+
+    .edu-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 10px;
+    }
+
+    .edu-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .edu-school {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+
+    .edu-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-hover);
+    }
+
+    .contact-card .c-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      background: var(--accent-glow);
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .contact-card .c-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .contact-card .c-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .social-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .social-btn:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: var(--accent-glow);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--footer-bg);
+      border-top: 1px solid var(--border);
+      padding: 36px 0;
+      text-align: center;
+      transition: var(--transition-theme);
+    }
+
+    footer p {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    footer .tagline {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 6px;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-d1 { transition-delay: 0.08s; }
+    .reveal-d2 { transition-delay: 0.16s; }
+    .reveal-d3 { transition-delay: 0.24s; }
+    .reveal-d4 { transition-delay: 0.32s; }
+    .reveal-d5 { transition-delay: 0.40s; }
+    .reveal-d6 { transition-delay: 0.48s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1080px) {
+      .hero-visual { display: none; }
+      .hero .container { justify-content: center; }
+      .hero-content { max-width: 700px; }
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--navbar-bg);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        padding: 16px;
+        gap: 4px;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-links.open a { padding: 12px 16px; border-radius: 10px; }
+      .hero h1 { font-size: 34px; letter-spacing: -1px; }
+      .hero-desc { font-size: 15px; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .hero-buttons { flex-direction: column; }
+      section { padding: 70px 0; }
+      .section-title { font-size: 28px; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .edu-grid { grid-template-columns: 1fr; }
+      .contact-cards { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">Aashir.dev</a>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact" class="nav-cta-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow one"></div>
+    <div class="hero-glow two"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Available for new projects
+        </div>
+        <h1>I build <span class="gradient-text">intelligent systems</span> that solve real problems.</h1>
+        <p class="hero-desc">Senior AI/ML Engineer and Head of AI at AFNEXIS. I turn complex AI ideas into production-ready SaaS products for healthcare, fintech, and education. From RAG pipelines to full-stack applications.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="number">8+</div>
+            <div class="label">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">14+</div>
+            <div class="label">Live Websites</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">5+</div>
+            <div class="label">Mobile Apps</div>
+          </div>
+          <div class="hero-stat">
+            <div class="number">100%</div>
+            <div class="label">Job Success</div>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Let's Talk</a>
+          <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> View Projects</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="code-window">
+          <div class="code-titlebar">
+            <div class="code-dot r"></div>
+            <div class="code-dot y"></div>
+            <div class="code-dot g"></div>
+            <span class="filename">aashir.py</span>
+          </div>
+          <div class="code-body">
+<div class="code-line"><span class="ck">class</span> <span class="cf">AashirTariq</span><span class="cb">:</span></div>
+<div class="code-line">    <span class="ck">def</span> <span class="cf">__init__</span><span class="cb">(</span><span class="cp">self</span><span class="cb">)</span><span class="cb">:</span></div>
+<div class="code-line">        <span class="cp">self</span>.role <span class="cb">=</span> <span class="cs">"Head of AI"</span></div>
+<div class="code-line">        <span class="cp">self</span>.company <span class="cb">=</span> <span class="cs">"AFNEXIS"</span></div>
+<div class="code-line">        <span class="cp">self</span>.stack <span class="cb">=</span> <span class="cb">[</span></div>
+<div class="code-line">            <span class="cs">"Python"</span><span class="cb">,</span> <span class="cs">"PyTorch"</span><span class="cb">,</span></div>
+<div class="code-line">            <span class="cs">"Next.js"</span><span class="cb">,</span> <span class="cs">"AWS"</span></div>
+<div class="code-line">        <span class="cb">]</span></div>
+<div class="code-line">        <span class="cp">self</span>.focus <span class="cb">=</span> <span class="cb">[</span></div>
+<div class="code-line">            <span class="cs">"LLMs"</span><span class="cb">,</span> <span class="cs">"RAG"</span><span class="cb">,</span></div>
+<div class="code-line">            <span class="cs">"Production AI"</span></div>
+<div class="code-line">        <span class="cb">]</span></div>
+<div class="code-line"></div>
+<div class="code-line">    <span class="ck">def</span> <span class="cf">build</span><span class="cb">(</span><span class="cp">self</span><span class="cb">,</span> idea<span class="cb">):</span></div>
+<div class="code-line">        <span class="ck">return</span> <span class="cs">"production_ready"</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / EXPERTISE -->
+  <section id="about" class="section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label"><i class="fas fa-bolt"></i> What I Do</div>
+        <h2 class="section-title">Core Expertise</h2>
+        <p class="section-subtitle">I specialize in building production AI systems and full-stack applications that drive real business outcomes.</p>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-card reveal reveal-d1">
+          <div class="expertise-icon"><i class="fas fa-brain"></i></div>
+          <h3>LLMs & RAG Systems</h3>
+          <p>Production RAG pipelines, LLM integration, prompt engineering, fine-tuning, and AI agent architectures. Built call centers, chatbots, and knowledge bases with GPT-4, Whisper, and open-source models.</p>
+        </div>
+        <div class="expertise-card reveal reveal-d2">
+          <div class="expertise-icon"><i class="fas fa-eye"></i></div>
+          <h3>Computer Vision & NLP</h3>
+          <p>Object detection (YOLOv8), multimodal AI, speech recognition (Whisper ASR), text analysis with BERT and transformer architectures. Research-backed and production-deployed.</p>
+        </div>
+        <div class="expertise-card reveal reveal-d3">
+          <div class="expertise-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Full Stack Development</h3>
+          <p>End-to-end SaaS products: Python/FastAPI/Django backends, React/Next.js frontends, Flutter mobile apps. From database schema to cloud deployment.</p>
+        </div>
+        <div class="expertise-card reveal reveal-d4">
+          <div class="expertise-icon"><i class="fas fa-database"></i></div>
+          <h3>Vector DBs & Search</h3>
+          <p>FAISS, Qdrant, Pinecone, Neo4j. Semantic search, embedding optimization, hybrid retrieval (BM25 + dense vectors). Migrated production vector database systems.</p>
+        </div>
+        <div class="expertise-card reveal reveal-d5">
+          <div class="expertise-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud & MLOps</h3>
+          <p>AWS, GCP, Azure deployments. Docker, Kubernetes, CI/CD pipelines. Model monitoring, automated retraining, GPU server management on Runpod.</p>
+        </div>
+        <div class="expertise-card reveal reveal-d6">
+          <div class="expertise-icon"><i class="fas fa-rocket"></i></div>
+          <h3>AI Product Leadership</h3>
+          <p>Leading AFNEXIS as Head of AI. Shipped 3 SaaS products to production. Architecture decisions, sprint planning, client delivery, and team management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label"><i class="fas fa-tools"></i> Tech Stack</div>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+      <div class="skills-categories reveal">
+        <div>
+          <div class="skill-cat-label">AI / Machine Learning</div>
+          <div class="skills-wrap">
+            <span class="skill-tag core">PyTorch</span>
+            <span class="skill-tag core">TensorFlow</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag core">HuggingFace</span>
+            <span class="skill-tag core">LangChain</span>
+            <span class="skill-tag core">OpenAI API</span>
+            <span class="skill-tag">GPT-4</span>
+            <span class="skill-tag">Whisper</span>
+            <span class="skill-tag">BERT</span>
+            <span class="skill-tag core">RAG</span>
+            <span class="skill-tag">BM25</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">Fine-tuning</span>
+            <span class="skill-tag">LLM Agents</span>
+            <span class="skill-tag">YOLOv8</span>
+            <span class="skill-tag">OpenCV</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-cat-label">Vector Databases & Search</div>
+          <div class="skills-wrap">
+            <span class="skill-tag core">FAISS</span>
+            <span class="skill-tag core">Qdrant</span>
+            <span class="skill-tag">Neo4j</span>
+            <span class="skill-tag">Pinecone</span>
+            <span class="skill-tag">Semantic Search</span>
+            <span class="skill-tag">Embeddings</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-cat-label">Backend & Frontend</div>
+          <div class="skills-wrap">
+            <span class="skill-tag core">Python</span>
+            <span class="skill-tag core">FastAPI</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag core">Node.js</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">WebSockets</span>
+            <span class="skill-tag core">React</span>
+            <span class="skill-tag core">Next.js</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Tailwind CSS</span>
+          </div>
+        </div>
+        <div>
+          <div class="skill-cat-label">Cloud, DevOps & Databases</div>
+          <div class="skills-wrap">
+            <span class="skill-tag core">AWS</span>
+            <span class="skill-tag core">GCP</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag core">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag core">PostgreSQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">Runpod</span>
+            <span class="skill-tag">Ollama</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label"><i class="fas fa-folder-open"></i> Portfolio</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Production-grade systems I've built and shipped. Real products serving real users.</p>
+      </div>
+
+      <div class="filter-tabs reveal">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="web">Web</button>
+        <button class="filter-tab" data-filter="mobile">Mobile</button>
+        <button class="filter-tab" data-filter="ai">AI</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- WEB PROJECTS -->
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Healthcare SaaS</div>
+          <h3>My Medical Records AI</h3>
+          <p class="project-desc">Privacy-focused platform centralizing medical records with AI summaries, health Q&A chatbot, and instant sharing with doctors.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Next.js</span><span>PostgreSQL</span><span>OpenAI API</span>
+          </div>
+          <a href="https://mymedicalrecords.ai" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">EdTech SaaS</div>
+          <h3>DeepCampus AI</h3>
+          <p class="project-desc">Centralizes thousands of scholarships and internships, delivers personalized matches, and tracks applications in one dashboard.</p>
+          <div class="project-tags">
+            <span>Node.js</span><span>Next.js</span><span>PostgreSQL</span><span>OpenAI API</span>
+          </div>
+          <a href="https://deepcampus.ai" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">AI Product</div>
+          <h3>VaultMind</h3>
+          <p class="project-desc">Fully offline AI knowledge base. Processes documents locally with zero cloud dependency. HIPAA and GDPR compliant.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Local LLMs</span><span>Vector Search</span>
+          </div>
+          <a href="https://www.vault-mind.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Company Website</div>
+          <h3>AFNEXIS</h3>
+          <p class="project-desc">AI-powered software development company delivering production-ready solutions. Fixed-price model, 4-8 week delivery. SOC 2 and GDPR compliant.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>React</span><span>Tailwind CSS</span>
+          </div>
+          <a href="https://afnexis.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Fintech</div>
+          <h3>ShinyLoans</h3>
+          <p class="project-desc">Online payday loan marketplace connecting borrowers with lenders. 3-minute application, same-day approval, $100-$2,500.</p>
+          <div class="project-tags">
+            <span>PHP</span><span>Laravel</span><span>Next.js</span><span>MySQL</span>
+          </div>
+          <a href="https://shinyloans.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Real Estate</div>
+          <h3>Highline Residential</h3>
+          <p class="project-desc">NYC residential brokerage platform with 26,000+ sales listings, CMA tools, price history tracking, and AI-generated leads via proprietary CRM.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>Python</span><span>PostgreSQL</span>
+          </div>
+          <a href="https://www.hlres.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">E-Commerce</div>
+          <h3>Jawnys Restaurant</h3>
+          <p class="project-desc">Full-featured restaurant e-commerce with dynamic product management, cart, orders, and complete admin panel.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>Python</span><span>PostgreSQL</span><span>GCP</span>
+          </div>
+          <a href="https://jawny-resturent.vercel.app" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Financial Services</div>
+          <h3>FinanceLink Australia</h3>
+          <p class="project-desc">Australian financial services platform connecting clients with loan and finance solutions.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>Node.js</span><span>PostgreSQL</span>
+          </div>
+          <a href="https://www.financelinkaustralia.com.au" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Healthcare Staffing</div>
+          <h3>RadShifts</h3>
+          <p class="project-desc">Mobile staffing platform for radiology departments. Real-time shift booking, instant credential verification, direct payments.</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>PostgreSQL</span>
+          </div>
+          <a href="https://radshifts.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Accessibility Tech</div>
+          <h3>VoxSonus</h3>
+          <p class="project-desc">Professional closed captioning service for 50+ languages. ADA and WCAG compliant. Covers dialogue, sound effects, and speaker identification.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>Python</span><span>AI/ML</span>
+          </div>
+          <a href="https://www.voxsonus.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">SaaS Platform</div>
+          <h3>Symi.io</h3>
+          <p class="project-desc">Modern SaaS platform with clean UI and real-time features. Built with latest web technologies and SEO optimized.</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>PostgreSQL</span>
+          </div>
+          <a href="https://symi.io" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Marketing</div>
+          <h3>Favor91</h3>
+          <p class="project-desc">Professional email marketing services platform with campaign management and analytics.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>Node.js</span><span>MySQL</span>
+          </div>
+          <a href="https://www.favor91.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Fintech</div>
+          <h3>Finovative Gulf</h3>
+          <p class="project-desc">Dubai-based financial advisory platform. Personal loans, debt consolidation, business finance, and mortgage services. 15+ years industry experience.</p>
+          <div class="project-tags">
+            <span>Next.js</span><span>React</span><span>Node.js</span>
+          </div>
+          <a href="https://finovativegulf.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <div class="project-card reveal" data-category="web">
+          <div class="project-badge">Social Impact</div>
+          <h3>My Impact Meter</h3>
+          <p class="project-desc">Impact measurement platform helping organizations track and visualize their social and environmental outcomes.</p>
+          <div class="project-tags">
+            <span>Django</span><span>Flutter</span><span>Firebase</span>
+          </div>
+          <a href="https://myimpactmeter.com" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+        </div>
+
+        <!-- MOBILE PROJECTS -->
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-badge">Mobile App</div>
+          <h3>My Medical Records AI</h3>
+          <p class="project-desc">Centralize and manage medical records on the go with AI-powered summaries.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Firebase</span><span>OpenAI API</span>
+          </div>
+          <div class="mobile-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.mymedicalrecords.app&hl=en_US" target="_blank" class="mobile-badge"><i class="fab fa-google-play"></i> Android</a>
+            <a href="https://apps.apple.com/us/app/my-medical-records-ai/id6757810301" target="_blank" class="mobile-badge"><i class="fab fa-apple"></i> iOS</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-badge">Mobile App</div>
+          <h3>My Impact Meter</h3>
+          <p class="project-desc">Track and visualize social and environmental impact metrics.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Firebase</span><span>Django</span>
+          </div>
+          <div class="mobile-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.impact.meter&hl=en" target="_blank" class="mobile-badge"><i class="fab fa-google-play"></i> Android</a>
+            <a href="https://apps.apple.com/pk/app/my-impact-meter/id1645519100" target="_blank" class="mobile-badge"><i class="fab fa-apple"></i> iOS</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-badge">Mobile App</div>
+          <h3>MIM Education Supplier</h3>
+          <p class="project-desc">Educational resource management for institutions and suppliers.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Firebase</span>
+          </div>
+          <div class="mobile-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.mimsupplier.education" target="_blank" class="mobile-badge"><i class="fab fa-google-play"></i> Android</a>
+            <a href="https://apps.apple.com/pk/app/mim-education-supplier/id1664417174" target="_blank" class="mobile-badge"><i class="fab fa-apple"></i> iOS</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-badge">Mobile App</div>
+          <h3>MIM Grocery</h3>
+          <p class="project-desc">Grocery shopping and delivery management app.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Firebase</span>
+          </div>
+          <div class="mobile-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.impactor.grocery" target="_blank" class="mobile-badge"><i class="fab fa-google-play"></i> Android</a>
+            <a href="https://apps.apple.com/pk/app/mim-grocery/id6444039263" target="_blank" class="mobile-badge"><i class="fab fa-apple"></i> iOS</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="mobile">
+          <div class="project-badge">Mobile App</div>
+          <h3>MIM NGO</h3>
+          <p class="project-desc">NGO management platform for tracking projects and donations.</p>
+          <div class="project-tags">
+            <span>Flutter</span><span>Firebase</span>
+          </div>
+          <div class="mobile-badges">
+            <a href="https://play.google.com/store/apps/details?id=com.impactor.ngo" target="_blank" class="mobile-badge"><i class="fab fa-google-play"></i> Android</a>
+            <a href="https://apps.apple.com/pk/app/mim-ngo/id1660898525" target="_blank" class="mobile-badge"><i class="fab fa-apple"></i> iOS</a>
+          </div>
+        </div>
+
+        <!-- AI PROJECTS -->
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-badge">Enterprise AI</div>
+          <h3>AI-Powered Call Center</h3>
+          <p class="project-desc">Built entire backend for automated call center. Real-time STT via Whisper Turbo, RAG with Qwen-2.5:7B, TTS responses over FastAPI WebSockets.</p>
+          <div class="project-tags">
+            <span>FastAPI</span><span>Whisper</span><span>Ollama</span><span>Qdrant</span><span>Runpod</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label"><i class="fas fa-briefcase"></i> Career</div>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2025 &mdash; Present</div>
+          <h3>Head of AI</h3>
+          <div class="timeline-company">AFNEXIS &bull; Multan, Pakistan</div>
+          <ul>
+            <li>Founded and lead an AI product studio delivering SaaS platforms for <strong>healthcare, fintech, and education</strong> clients across the US and Middle East.</li>
+            <li>Shipped <strong>VaultMind</strong>, a fully offline AI knowledge base with zero cloud dependency for enterprise data privacy.</li>
+            <li>Grew portfolio to <strong>3 active SaaS products</strong> serving end users in production.</li>
+            <li>Own end-to-end product development: architecture, sprint planning, client delivery, and engineering team.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Dec 2024 &mdash; Jan 2025</div>
+          <h3>Senior ML Engineer & Team Lead</h3>
+          <div class="timeline-company">ESAP AI &bull; Riyadh, Saudi Arabia (Remote)</div>
+          <ul>
+            <li>Led ML engineers building LLM systems on <strong>Runpod</strong> GPUs using Ollama and Qwen-2.5:7B.</li>
+            <li>Built an <strong>AI-powered automated call center</strong> with real-time STT, RAG, and TTS over WebSockets.</li>
+            <li>Fine-tuned <strong>ASR pipelines</strong> with OpenAI Whisper processing hundreds of daily queries in production.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Sept 2023 &mdash; Dec 2024</div>
+          <h3>AI/ML Full Stack Engineer</h3>
+          <div class="timeline-company">Hosting Controller Inc &bull; Islamabad, Pakistan</div>
+          <ul>
+            <li>Deployed ML models on <strong>AWS</strong> via TensorFlow/PyTorch, served through REST and GraphQL APIs in Docker.</li>
+            <li>Built full-stack AI apps: Python backends with <strong>React and Flutter</strong> frontends.</li>
+            <li>Set up <strong>MLOps pipelines</strong> for monitoring and retraining. Cut manual effort by half.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Jan 2023 &mdash; Jun 2023</div>
+          <h3>Visiting Instructor (Machine Learning)</h3>
+          <div class="timeline-company">FAST NUCES &bull; Islamabad, Pakistan</div>
+          <ul>
+            <li>Taught ML lab to <strong>60+ students</strong>. Built all course materials, lectures, assignments, and exams.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label"><i class="fas fa-graduation-cap"></i> Education</div>
+        <h2 class="section-title">Academic Background</h2>
+      </div>
+      <div class="edu-grid reveal">
+        <div class="edu-card">
+          <div class="edu-date">Sept 2021 &mdash; June 2023</div>
+          <h3>M.S. Artificial Intelligence</h3>
+          <div class="edu-school">FAST National University &bull; Islamabad</div>
+          <p>CGPA: 3.37/4.0 &bull; Thesis: Multi-Modal Toxic Span Detection for Low Resource Language using VGG-19, OpenSmile, and XLM-RoBERTa with late fusion.</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-date">Feb 2017 &mdash; Jan 2021</div>
+          <h3>B.S. Computer Science</h3>
+          <div class="edu-school">COMSATS University &bull; Vehari</div>
+          <p>FYP: Urdu Voice Command Recognition System (44-class classification using MFCC, Mel Spectrograms, and deep learning).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header center reveal">
+        <div class="section-label"><i class="fas fa-envelope"></i> Contact</div>
+        <h2 class="section-title">Let's Build Something Together</h2>
+        <p class="section-subtitle">Open to full-time, contract, and freelance. Got an AI project? Let's talk.</p>
+      </div>
+
+      <div class="contact-cards reveal">
+        <a href="mailto:mashr9980@gmail.com" class="contact-card">
+          <div class="c-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="c-label">Email</div>
+            <div class="c-value">mashr9980@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+16463797856" class="contact-card">
+          <div class="c-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="c-label">US Number</div>
+            <div class="c-value">+1 646 379 7856</div>
+          </div>
+        </a>
+        <a href="tel:+923008808985" class="contact-card">
+          <div class="c-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="c-label">PK Number</div>
+            <div class="c-value">+92 300 880 8985</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="social-row reveal">
+        <a href="https://github.com/mashr9980" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.upwork.com/" target="_blank" class="social-btn" title="Upwork"><i class="fas fa-briefcase"></i></a>
+        <a href="mailto:mashr9980@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Muhammad Aashir Tariq. All rights reserved.</p>
+      <p class="tagline">"Building intelligent systems that solve real problems, from concept to production."</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== THEME SYSTEM =====
+    const html = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+
+    // Check saved preference, then system preference
+    function getPreferredTheme() {
+      const saved = localStorage.getItem('theme');
+      if (saved) return saved;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function setTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    // Init theme
+    setTheme(getPreferredTheme());
+
+    // Toggle button
+    toggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Listen for system changes (if user hasn't manually chosen)
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+
+    // ===== MOBILE MENU =====
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+    // ===== ACTIVE NAV LINK =====
+    const sections = document.querySelectorAll('section[id]');
+    function updateActiveLink() {
+      const y = window.scrollY + 120;
+      sections.forEach(s => {
+        const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+        if (link) link.classList.toggle('active', y >= s.offsetTop && y < s.offsetTop + s.offsetHeight);
+      });
+    }
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+    // ===== SCROLL REVEAL =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ===== PROJECT FILTER TABS =====
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Update active tab
+        filterTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filter === 'all') {
+            card.classList.remove('hidden');
+          } else {
+            const category = card.getAttribute('data-category');
+            if (category === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
 </html>
